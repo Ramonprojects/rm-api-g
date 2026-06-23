@@ -22,8 +22,26 @@
       res.writeHead(302, { Location: "https://grupojogadorcaro.com.br/quem-e-jota" });
       res.end();
       return;
+    }                                                                                                                                                                                      
+                                                                                                                                                                                         
+    const url = 'https://go.aff.esportiva.bet/nvgf8026?campaign_id=24737'
+
+    const shareCode = '&shareCode=A7FVZL4B15V'
+    
+    const afp = '&afp2=tapig'
+    
+    const source = '&utm_medium=geral'
+    
+    const destino = new URL(url + shareCode + afp + source)
+
+    const entrada = new URL(req.url, `https://${req.headers.host}`).searchParams;
+
+    for (const [chave, valor] of entrada) {
+      if (chave.startsWith('utm_') || chave === 'source_id' || chave === 'fbclid' || chave === 'gclid') {
+        destino.searchParams.set(chave, valor);
+      }
     }
 
-    res.writeHead(302, { Location: "https://go.aff.esportiva.bet/nvgf8026?campaign_id=24737&shareCode=A7FVZL4B15V&afp=tapig" });
+    res.writeHead(302, { Location: destino.toString() });
     res.end();
   }
