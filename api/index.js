@@ -28,7 +28,7 @@
 
     const shareCode = '&shareCode=ADK5SHIB9S1'
     
-    const afp = '&afp6=tapig'
+    const afp = '&afp2=tapig'
     
     const source = '&utm_medium=geral'
     
