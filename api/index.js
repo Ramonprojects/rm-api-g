@@ -24,7 +24,7 @@
       return;
     }                                                                                                                                                                                      
                                                                                                                                                                                          
-    const url = 'https://go.aff.esportiva.bet/nvgf8026?campaign_id=30252'
+    const url = 'https://go.aff.esportiva.bet/nvgf8026?campaign_id=24737'
 
     const shareCode = '&shareCode=ADK5SHIB9S1'
     
